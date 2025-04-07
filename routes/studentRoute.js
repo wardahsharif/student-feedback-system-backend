@@ -10,7 +10,7 @@ const {verifyAccessToken}= require('../helpers/jwtHelper');
 
 routes.get('/students', studentController.getStudent);
 routes.get('/students/:id', studentController.getStudentId);
-routes.post('/students', studentController.AddStudents);
+routes.post('/student', studentController.AddStudents);
 routes.patch('/updateStudent/:id', studentController.updateStudents);
 routes.delete('/deleteStudent/:id', studentController.deleteStudent);
 

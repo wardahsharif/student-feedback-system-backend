@@ -9,6 +9,16 @@ const { signAccessToken, signRefreshToken, verifyRefreshToken} = require('../hel
 
 
 module.exports = {
+    
+    getAllUsers: async (req, res, next) => {
+        try {
+            const users = await User.find();
+            res.send(users);
+        } catch (error) {
+            console.log(error.message);
+            next(error);
+        }
+    },
     getUser: async (req,res, next) => {
     const id = req.params.id;
     try{

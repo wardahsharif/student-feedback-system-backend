@@ -3,7 +3,10 @@ const routes = express.Router();
 const User = require('../models/userModel');
 const userController = require('../controller/userController');
 
-routes.get('/getUsers/:id', userController.getUser);
+
+
+routes.get('/getUsers', userController.getAllUsers);
+routes.get('/getUser/:id', userController.getUser);
 routes.patch('/updateUsers/:id', userController.updateUser);
 routes.delete('/deleteUsers/:id', userController.deleteUser);
 routes.post('/register', userController.AddUser);

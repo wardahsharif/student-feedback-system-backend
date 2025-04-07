@@ -9,7 +9,7 @@ module.exports = {
             const secret = process.env.ACCESS_TOKEN_SECRET;
             const options = {
                 expiresIn: '2h',
-                issuer: 'EddTechnologies.com',
+                issuer: 'wardahstech.com',
                 audience: UserId,
             }
             JWT.sign(payload, secret, options, (error, token)=>{
@@ -40,7 +40,7 @@ module.exports = {
             const secret = process.env.REFRESH_TOKEN_SECRET;
             const options = {
                 expiresIn: '2min',
-                issuer: 'EddTechnologies.com',
+                issuer: 'wardahstech.com',
                 audience: UserId,
             }
             JWT.sign(payload, secret, options, (error, token)=>{
